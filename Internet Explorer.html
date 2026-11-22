@@ -279,7 +279,7 @@ version 0.6.9
       const scaffolding = new Scaffolding.Scaffolding();
       scaffolding.width = 230;
       scaffolding.height = 420;
-      scaffolding.resizeMode = "stretch";
+      scaffolding.resizeMode = "preserve-ratio";
       scaffolding.editableLists = false;
       scaffolding.usePackagedRuntime = true;
       scaffolding.setup();
@@ -309,11 +309,11 @@ version 0.6.9
       vm.setTurboMode(false);
       if (vm.setInterpolation) vm.setInterpolation(false);
       if (vm.setFramerate) vm.setFramerate(30);
-      if (vm.renderer.setUseHighQualityRender) vm.renderer.setUseHighQualityRender(false);
+      if (vm.renderer.setUseHighQualityRender) vm.renderer.setUseHighQualityRender(true);
       if (vm.setRuntimeOptions) vm.setRuntimeOptions({
         fencing: true,
         miscLimits: true,
-        maxClones: 300,
+        maxClones: 9999999999,
         dangerousOptimizations: false
       });
       if (vm.setCompilerOptions) vm.setCompilerOptions({
